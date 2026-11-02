@@ -1,0 +1,14 @@
+[
+  {"name": "ptbxl", "kind": "ptbxl", "root": "/data/ptb-xl-1.0.3", "options": {"use_hr": true}},
+  {"name": "chapman_ningbo", "kind": "physionet_snomed", "root": "/data/ecg-arrhythmia-1.0.0/WFDBRecords"},
+  {"name": "mimic_ecg", "kind": "mimic_ecg", "root": "/data/mimic-iv-ecg-1.0"},
+  {"name": "acs_ecg", "kind": "manifest", "root": "/data/acs-ecg",
+   "options": {"manifest": "manifest.csv", "format": "wfdb",
+               "label_map": {"Atrial Fibrillation": "AFIB", "Normal": "NORM"},
+               "annotated": ["NORM", "AFIB", "LBBB", "RBBB", "MI", "STTC"]}},
+  {"name": "zzu_pecg", "kind": "manifest", "root": "/data/zzu-pecg",
+   "options": {"manifest": "manifest.csv", "annotated": ["NORM", "AFIB", "SBRAD", "STACH", "PVC", "PAC"]}},
+  {"name": "echonext", "kind": "manifest", "root": "/data/echonext",
+   "options": {"manifest": "manifest.csv", "format": "npy", "fs": 250,
+               "flag_columns": {"shd_moderate_or_greater_flag": "SHD"}, "annotated": ["SHD"]}}
+]
